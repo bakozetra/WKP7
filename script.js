@@ -1,26 +1,26 @@
 const books = [
     {
         title : "the alchemist",
-        author : "persone",
-        genre :["Mystery", "Thriller", "Fiction", "Non-fiction", "Fantasy", "Design", "Memoirs"],
+        author : "person",
+        genre :"Mystery",
         pages: "125 ", 
-        status: ['Read' ,'not'],
+        status: 'Read',
         id: "firstBook",
     },
     {
-        title : "the alchemist",
+        title : "the bible",
         author : "persone",
-        genre :["Mystery", "Thriller", "Fiction", "Non-fiction", "Fantasy", "Design", "Memoirs"],
+        genre :"Mystery",
         pages: "125 ", 
-        status: ['Read' ,'not'],
+        status: 'Read',
         id: "secondtBook",
     },
     {
-        title : "the alchemist",
+        title : "the good book",
         author : "persone",
-        genre :["Mystery", "Thriller", "Fiction", "Non-fiction", "Fantasy", "Design", "Memoirs"],
+        genre :"Thriller",
         pages: "125 ", 
-        status: ['Read' ,'not'],
+        status:'not',
         id: "thirdBook",
     },
     
@@ -44,10 +44,10 @@ const genreInput = document.querySelector(".select-form");
                 <td>${book.title}</td>
                 <td>${book.author}</td>
                 <td>${book.pages}</td>
-                <td>${book.genre.find(genr => `<li>${genr.genre}</li>`)}</td>
+                <td>${book.genre}</td>
                 <td>
-                  <input type="checkbox" id="scales" name="scales"
-                  checked>
+                  <input type="checkbox" id="input" name="scales">
+                  <button class = "delete">delete</button>
                 </td>
             </tr>
         `  
@@ -55,12 +55,10 @@ const genreInput = document.querySelector(".select-form");
         aboutBook.innerHTML = detailBook.join(' ') ;
 };
 // grab the option
-const unread = document.querySelector('.notread');
-console.log(aboutBooks());
-const inputBook = (e) => {
-    
-    e.preventDefault();
 
+console.log(aboutBooks());
+const inputBook = (e) => {    
+    e.preventDefault();
     const html = 
     `
     <tr>
@@ -71,6 +69,7 @@ const inputBook = (e) => {
         <td>
           <input type="checkbox" id="scales" name="scales"
           checked>
+          <button class = "delete" value="${item.id}">delete</button>
         </td>
     </tr>
 `  
@@ -90,8 +89,22 @@ const checkbutton = () => {
             console.log(result); 
         };
         console.log(btn.onclick());
-          
-
+    const unread = document.querySelector('.notread'); 
+    btn.onclick = () => {
         
+    }   
 }
 addButton.addEventListener('click',checkbutton);
+//  deletet the book 
+const deleteBtn = (id) => {
+console.log('deleting item');
+}
+aboutBook.addEventListener('click', function (e) {
+    const id = Number(e.target.value)
+    if(e.target.matches('button')) {
+        deleteBtn(id);
+    }
+    // if(e.target.matches('input[type ="checkbox"]')) {
+    //     markAsComplete(id);
+    // }
+});
