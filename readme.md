@@ -33,3 +33,32 @@ Hope you are ready for a new challenge. I have a nice one for you this week. We'
 -   I suggest you to look back to the Shopping List exercise we did together (Video 57). There is a lot of similarities between the exercise and this project 😉
 
 ### Good luck team 🙌
+
+
+## WKP7 - Report
+1) Structure of my project .
+- I have create an html which contains two section.
+- There are two fucions and  one object.
+- I have created an object in javaScript and I add an array into that.
+- After  that , I map throught the object  and created an html for the array so  that it can show on the list of book.
+- And then , I grab all of the inputs from in html. I created one fuction  and I created an html inside it I  put all of the input to get the value.
+- I  add event listener to add button so when I click the button and it add another book on the list of book.
+
+2) If had more time
+
+- First and formost , I would like to change my method as the shopping list.
+- I want to delete the book if I can.
+
+3) Did you learn anything new while working on this?
+ -  I did not learn anything new.
+
+
+4) Most challenging part
+- To check the checkbox and deleting  the list of the book are the most challenging. I don't know to choose  the method should I use. 
+
+5) More explanation about specific topic.
+
+- I have changed my method like the shopping list but it does not work and because of that I use another method. So if you can I would like you to explain more about that.
+
+6) Any comments.
+- Everything is good.
